@@ -101,21 +101,15 @@
     }
 
     .brand-mark {
-      display: grid;
-      place-items: center;
+      display: block;
       width: 48px;
       height: 48px;
       flex: 0 0 48px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
     }
 
     .brand-mark img {
-      width: 42px;
-      height: 42px;
+      width: 48px;
+      height: 48px;
       object-fit: contain;
     }
 
@@ -343,6 +337,31 @@
       line-height: 1.7;
     }
 
+    .dress-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .dress-row {
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(107, 70, 193, 0.18);
+      color: var(--grey);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .dress-row:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .dress-row strong {
+      color: var(--black);
+      font-weight: 900;
+    }
+
     .timeline {
       display: flex;
       flex-direction: column;
@@ -398,6 +417,10 @@
     }
 
     .bank-row {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      align-items: center;
+      column-gap: 12px;
       border-bottom: 1px dashed rgba(43, 108, 176, 0.22);
     }
 
@@ -444,14 +467,8 @@
     }
 
     .bank-value {
-      width: 128px;
+      justify-self: start;
       text-align: left;
-    }
-
-    .bank-code.bank-value {
-      width: auto;
-      min-width: 0;
-      margin-right: 80px;
     }
 
     .bank-account {
@@ -837,8 +854,8 @@
       }
 
       .brand-mark img {
-        width: 38px;
-        height: 38px;
+        width: 44px;
+        height: 44px;
       }
 
       .brand-subtitle {
@@ -895,6 +912,14 @@
       .form-column {
         margin-top: 28px;
         border-left: 0;
+      }
+
+      .bank-row {
+        grid-template-columns: 64px 1fr;
+      }
+
+      .bank-account {
+        font-size: 16px;
       }
     }
 
@@ -996,15 +1021,9 @@
           <div>
             <h3 class="card-title" style="color:#6b46c1;">服裝規定</h3>
             <p class="card-main">Smart Casual 商務休閒</p>
-              <div class="fee-row">
-                <span>建議搭配： 襯衫、Polo 衫、西裝外套、卡其褲、深色長褲或俐落連身裙；鞋款建議選擇皮鞋、樂福鞋、包頭鞋或乾淨簡約的休閒皮鞋/小白鞋。
-</span>
-             
-              </div>
-             <div class="fee-row">
-                <span>請避免穿著： 吊帶背心、短褲、刷破牛仔褲、拖鞋或運動涼鞋。</span>
-               
-              </div>
+            <div class="dress-list">
+              <p class="dress-row"><strong>建議搭配：</strong>襯衫、Polo 衫、西裝外套、卡其褲、深色長褲或俐落連身裙</p>
+            </div>
           </div>
         </article>
       </div>
